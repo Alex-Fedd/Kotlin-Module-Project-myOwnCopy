@@ -1,14 +1,16 @@
 import java.util.Scanner
 
-class Archive: AppMenuSelection {
+class Archives {
     private val scan = Scanner(System.`in`)
+
+    val archivesList = mutableListOf<Archive>()
     private val screenState: CurrentScreenState? = CurrentScreenState.ArchiveSelection//меню архивов
     private val listOfCommands = mutableListOf(
         "Создать архив",
         "Выйти"
     )
 
-    fun archiveMenu(): CurrentScreenState? {
+    fun showArchivesMenu(): CurrentScreenState? {
         while (true) {
             println("Вы в ${screenState?.nameOf}. Введите команду (цифру) из списка:")
 
@@ -44,14 +46,13 @@ class Archive: AppMenuSelection {
     }
 
     private fun checkArchiveNumber(userInput: Int): Note? {
-        return Note("Заметка")
+        return Note("Заметка", "Какой-то контент внутри")
     }
 
-    override fun showMenu() {
-        TODO("Not yet implemented")
-    }
 
 }
+
+class Archive(val archiveName: String, val notesList: ArrayList<Note>)
 
 
 
