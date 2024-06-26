@@ -1,0 +1,4 @@
+interface AppMenuSelection {
+    fun showMenu()
+
+}

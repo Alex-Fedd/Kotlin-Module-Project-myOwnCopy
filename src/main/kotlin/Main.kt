@@ -1,12 +1,11 @@
 fun main() {
     println("Запускаем приложение \"Заметки\"")
-    start()
+   // val appStart = MyAppNavigation() // старт с 1-го меню
+    val test = Archive()
+    test.archiveMenu()
+
 }
 
-fun start(){
-    val archivesMenu = ArchivesMenu()
-    archivesMenu.createArchives()
-}
 /*
 //data class MyArchive(val name: String)
 
