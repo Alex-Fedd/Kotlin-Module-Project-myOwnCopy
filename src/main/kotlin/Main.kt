@@ -1,3 +1,8 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    println("Запускаем приложение \"Заметки\"")
+    val startApp = MainMenu()
+    startApp.startArchivesMenu()
 }
+
+
+
